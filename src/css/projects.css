@@ -1,0 +1,241 @@
+/* ==========================================================================
+   REGİONAL İNKİŞAF LAYİHƏLƏRİ SƏHİFƏSİ (src/css/projects.css)
+   Dizayn konsepti: Layihələr Portfeli, Filtrasiya, Status Göstəriciləri
+   ========================================================================== */
+
+/* 1. Layihələr Başlıq Paneli */
+.proj-hero-banner {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 20px rgba(8, 43, 72, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.proj-hero-content {
+    max-width: 780px;
+}
+
+.proj-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+}
+
+.proj-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--arpsn-text-muted, #536474);
+    margin: 0;
+}
+
+.proj-stats-summary {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.proj-stat-mini {
+    background: #fbf9f6;
+    border: 1px solid #ebe5dc;
+    border-radius: 8px;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.proj-stat-mini strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.1;
+}
+
+.proj-stat-mini small {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--arpsn-gold, #B99755);
+    text-transform: uppercase;
+}
+
+/* 2. Layihələr Filtr Düymələri */
+.proj-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+}
+
+.proj-filter-btn {
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 1px solid #d5cebf;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--arpsn-navy, #082B48);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.proj-filter-btn:hover {
+    background: #f4ecdf;
+    border-color: var(--arpsn-navy, #082B48);
+}
+
+.proj-filter-btn.active {
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+    border-color: var(--arpsn-navy, #082B48);
+    box-shadow: 0 4px 12px rgba(8, 43, 72, 0.2);
+}
+
+/* 3. Layihələr Qridi (Grid) */
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 50px;
+}
+
+.proj-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.1));
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.05);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.proj-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(8, 43, 72, 0.12);
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.proj-card-thumb {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: #082B48;
+}
+
+.proj-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proj-card:hover .proj-card-thumb img {
+    transform: scale(1.06);
+}
+
+.proj-badge-status {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.proj-status-active {
+    background: #082B48;
+    color: #ffd875;
+    border: 1px solid var(--arpsn-gold, #B99755);
+}
+
+.proj-status-completed {
+    background: #198754;
+    color: #ffffff;
+}
+
+.proj-status-planning {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+.proj-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.proj-location {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--arpsn-gold, #B99755);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+}
+
+.proj-title {
+    font-size: 17.5px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.proj-desc {
+    font-size: 14px;
+    color: #556677;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.proj-progress-wrap {
+    margin-bottom: 18px;
+}
+
+.proj-progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 6px;
+}
+
+.proj-progress-bg {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.proj-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--arpsn-navy, #082B48), var(--arpsn-gold, #B99755));
+    border-radius: 4px;
+}
+
+.proj-footer-meta {
+    padding-top: 15px;
+    border-top: 1px solid #ebe5dc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: #728494;
+}

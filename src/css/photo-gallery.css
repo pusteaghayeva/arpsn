@@ -1,0 +1,113 @@
+/* ==========================================================================
+   FOTOXRONİKA QALEREYASI (src/css/photo-gallery.css)
+   Dizayn konsepti: Rəsmi Foto Albomlar, Mozaika, Lightbox
+   ========================================================================== */
+
+.photo-hero-box {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(8, 43, 72, 0.05);
+}
+
+.photo-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+}
+
+.photo-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--arpsn-text-muted, #536474);
+    max-width: 850px;
+    margin: 0;
+}
+
+/* Albomlar Qridi */
+.photo-albums-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 50px;
+}
+
+.photo-album-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.1));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.04);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-album-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(8, 43, 72, 0.12);
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.photo-thumb-wrap {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: #082B48;
+}
+
+.photo-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-album-card:hover .photo-thumb-wrap img {
+    transform: scale(1.08);
+}
+
+.photo-count-pill {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(8, 43, 72, 0.85);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.photo-album-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-album-date {
+    font-size: 12.5px;
+    color: #728494;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.photo-album-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    line-height: 1.4;
+    margin: 0;
+}

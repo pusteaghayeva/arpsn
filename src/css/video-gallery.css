@@ -1,0 +1,191 @@
+/* ==========================================================================
+   VİDEO REPORTAJLAR SƏHİFƏSİ (src/css/video-gallery.css)
+   Dizayn konsepti: Rəsmi Video Portalı, Sinema Player, Playlist
+   ========================================================================== */
+
+.video-hero-box {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(8, 43, 72, 0.05);
+}
+
+.video-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+}
+
+.video-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--arpsn-text-muted, #536474);
+    max-width: 850px;
+    margin: 0;
+}
+
+/* Əsas Video Teatr Paneli */
+.video-theater-card {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.video-player-aspect {
+    position: relative;
+    padding-top: 52%;
+    background: #082B48;
+}
+
+.video-player-aspect img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(185, 151, 85, 0.9);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: var(--arpsn-gold, #B99755);
+}
+
+.video-theater-info {
+    padding: 24px 30px;
+    background: #082B48;
+    color: #ffffff;
+}
+
+.video-theater-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.video-theater-desc {
+    font-size: 14.5px;
+    color: #cad8e5;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Video Qridi */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 50px;
+}
+
+.video-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.1));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.04);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(8, 43, 72, 0.1);
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.video-card-thumb {
+    height: 180px;
+    position: relative;
+    background: #082B48;
+    overflow: hidden;
+}
+
+.video-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-card-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(8, 43, 72, 0.85);
+    color: var(--arpsn-gold, #B99755);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.video-card:hover .video-card-play {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: var(--arpsn-gold, #B99755);
+    color: #ffffff;
+}
+
+.video-duration-pill {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.video-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card-date {
+    font-size: 12px;
+    color: #728494;
+    margin-bottom: 6px;
+}
+
+.video-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    line-height: 1.4;
+    margin: 0;
+}

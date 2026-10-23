@@ -1,0 +1,224 @@
+/* ==========================================================================
+   APARATIN STRUKTURU SƏHİFƏSİ STİLLƏRİ (src/css/structure.css)
+   Vizual orqanoqramma və şöbələr arxitekturası
+   ========================================================================== */
+
+.structure-page-wrap {
+    padding: 30px 0 60px;
+    background: #fbf9f6;
+}
+
+.structure-header-block {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.structure-header-block h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 6px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.structure-header-block p {
+    font-size: 15px;
+    color: var(--arpsn-gold, #B99755);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Orqanoqramma Ağacı */
+.organigram-tree-container {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin-bottom: 45px;
+    box-shadow: 0 8px 25px rgba(8, 43, 72, 0.05);
+}
+
+.tree-root-level {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.tree-root-level::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 35px;
+    background: var(--arpsn-gold, #B99755);
+}
+
+.tree-node-primary {
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+    border: 2px solid var(--arpsn-gold, #B99755);
+    border-radius: 8px;
+    padding: 18px 30px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(8, 43, 72, 0.2);
+    max-width: 420px;
+    width: 100%;
+}
+
+.tree-node-primary h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 4px;
+    color: #ffffff;
+}
+
+.tree-node-primary span {
+    font-size: 13px;
+    color: var(--arpsn-gold, #B99755);
+    font-weight: 600;
+}
+
+.tree-second-level {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    padding: 35px 0;
+}
+
+.tree-second-level::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background: var(--arpsn-gold, #B99755);
+}
+
+.tree-second-level::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #c8bfad;
+}
+
+.tree-node-secondary {
+    background: #f7f5f0;
+    border: 1px solid #d5cebf;
+    border-top: 3px solid var(--arpsn-navy, #082B48);
+    border-radius: 8px;
+    padding: 14px 22px;
+    text-align: center;
+    min-width: 240px;
+    position: relative;
+}
+
+.tree-node-secondary::before {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 35px;
+    background: var(--arpsn-gold, #B99755);
+}
+
+.tree-node-secondary h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    margin: 0;
+}
+
+/* Şöbələr Şəbəkəsi (Departments Grid) */
+.dept-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.dept-detail-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-left: 4px solid var(--arpsn-navy, #082B48);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.04);
+    transition: transform 0.2s ease, border-left-color 0.2s ease;
+}
+
+.dept-detail-card:hover {
+    transform: translateY(-3px);
+    border-left-color: var(--arpsn-gold, #B99755);
+    box-shadow: 0 8px 24px rgba(8, 43, 72, 0.08);
+}
+
+.dept-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.dept-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--arpsn-navy, #082B48);
+    color: var(--arpsn-gold, #B99755);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.dept-card-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin: 0;
+    line-height: 1.35;
+}
+
+.dept-func-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    font-size: 13.5px;
+    color: #4a5c6d;
+    line-height: 1.65;
+}
+
+.dept-func-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+}
+
+.dept-func-list li::before {
+    content: '▪';
+    position: absolute;
+    left: 2px;
+    color: var(--arpsn-gold, #B99755);
+    font-size: 16px;
+    line-height: 1;
+}
+
+.dept-card-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px dashed #e5e0d8;
+    font-size: 12.5px;
+    color: #6a7d90;
+}

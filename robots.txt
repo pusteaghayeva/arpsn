@@ -1,0 +1,12 @@
+# robots.txt for ARPSN Official Web Portal (arpsn.gov.az)
+# Naxçıvan Muxtar Respublikasında Azərbaycan Respublikası Prezidentinin Səlahiyyətli Nümayəndəliyi
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /internal/
+
+# Sitemaps
+Sitemap: https://arpsn.gov.az/sitemap.xml

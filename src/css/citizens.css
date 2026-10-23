@@ -1,0 +1,327 @@
+/* ==========================================================================
+   VƏTƏNDAŞLAR ÜÇÜN ELEKTRON XİDMƏTLƏR — RƏSMİ İNTERNET SƏHİFƏSİ STİLLƏRİ
+   ARPSN Rəsmi Dizayn Sistemi: #082B48, #B99755, #F7F5F0
+   ========================================================================== */
+
+/* 1. Müraciət və Xidmət Kartları */
+.citizen-service-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.04);
+}
+
+.service-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--arpsn-gold, #B99755);
+    background: rgba(185, 151, 85, 0.1);
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+/* 2. Rəsmi Forma Stilləri */
+.arpsn-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.arpsn-form-grid .full-col {
+    grid-column: span 2;
+}
+
+.form-group-official {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group-official label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--arpsn-navy, #082B48);
+}
+
+.form-group-official label .req {
+    color: #c93b2b;
+    margin-left: 2px;
+}
+
+.form-group-official input,
+.form-group-official select,
+.form-group-official textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #d5cebf;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #2c3e50;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group-official input:focus,
+.form-group-official select:focus,
+.form-group-official textarea:focus {
+    border-color: var(--arpsn-gold, #B99755);
+    box-shadow: 0 0 0 3px rgba(185, 151, 85, 0.18);
+}
+
+.form-field-hint {
+    font-size: 11.5px;
+    color: #7b8e9d;
+    margin-top: 2px;
+}
+
+/* Fayl Yükləmə Qutusu */
+.file-upload-zone {
+    border: 2px dashed #c8bfad;
+    background: #fbf9f6;
+    border-radius: 8px;
+    padding: 24px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.file-upload-zone:hover {
+    border-color: var(--arpsn-gold, #B99755);
+    background: #f5f0e6;
+}
+
+.file-upload-zone i {
+    font-size: 32px;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.file-upload-zone p {
+    font-size: 13px;
+    color: #556980;
+    margin-bottom: 4px;
+}
+
+.file-upload-zone small {
+    font-size: 11.5px;
+    color: #8c9ba5;
+}
+
+/* Razılıq və Düymələr */
+.consent-checkbox-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: #4a5c6d;
+    line-height: 1.5;
+}
+
+.consent-checkbox-wrap input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin-top: 2px;
+    accent-color: var(--arpsn-navy, #082B48);
+    cursor: pointer;
+}
+
+.btn-official-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14.5px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-official-submit:hover {
+    background: #0d3b61;
+    transform: translateY(-2px);
+}
+
+/* 3. Uğurlu Müraciət Təsdiqi */
+.appeal-success-receipt {
+    display: none;
+    background: linear-gradient(135deg, #f2f7f5 0%, #e5f2ed 100%);
+    border: 1px solid #9dcbb5;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 25px;
+}
+
+.appeal-success-receipt h4 {
+    color: #1a6b47;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.receipt-code-badge {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px dashed #1a6b47;
+    color: #1a6b47;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+/* 4. Status Yoxlama Axtarış Paneli */
+.status-tracker-box {
+    background: #fbf9f6;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.status-search-form {
+    display: flex;
+    gap: 12px;
+}
+
+.status-search-form input {
+    flex-grow: 1;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    border: 1px solid #d5cebf;
+    border-radius: 6px;
+    outline: none;
+}
+
+.status-search-form input:focus {
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.status-result-box {
+    display: none;
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* 5. Qəbul Qrafiki Cədvəli */
+.schedule-table-wrap {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.schedule-table th {
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+    border: 1px solid #143e62;
+}
+
+.schedule-table td {
+    padding: 12px 16px;
+    border: 1px solid #e5e0d8;
+    color: #3e5062;
+}
+
+.schedule-table tr:nth-child(even) td {
+    background: #faf8f5;
+}
+
+.schedule-table tr:hover td {
+    background: #f4ede0;
+}
+
+/* 6. FAQ Accordion */
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-header {
+    width: 100%;
+    background: #fbf9f6;
+    border: none;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.faq-header:hover {
+    background: #f2eee5;
+}
+
+.faq-header i {
+    font-size: 14px;
+    color: var(--arpsn-gold, #B99755);
+    transition: transform 0.25s ease;
+}
+
+.faq-header.active i {
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    display: none;
+    padding: 18px 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #4a5c6d;
+    border-top: 1px solid #e5e0d8;
+    background: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .arpsn-form-grid {
+        grid-template-columns: 1fr;
+    }
+    .arpsn-form-grid .full-col {
+        grid-column: span 1;
+    }
+    .status-search-form {
+        flex-direction: column;
+    }
+}

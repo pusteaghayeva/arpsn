@@ -1,0 +1,501 @@
+/**
+ * ARPSN - Rəsmi İnternet Portalı
+ * Nümayəndəlik Səhifəsi Xüsusi Stilləri (src/css/representation.css)
+ */
+
+/* Daxili Səhifə Ümumi Hero & Breadcrumb */
+.inner-breadcrumb-strip {
+    background: #ebe7df;
+    border-bottom: 1px solid rgba(8, 43, 72, 0.08);
+    padding: 12px 0;
+    font-size: 13px;
+}
+.inner-breadcrumb-strip ol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.inner-breadcrumb-strip li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--arpsn-text-muted);
+}
+.inner-breadcrumb-strip li a {
+    color: var(--arpsn-navy);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.inner-breadcrumb-strip li a:hover {
+    color: var(--arpsn-gold);
+}
+.inner-breadcrumb-strip li.active {
+    color: var(--arpsn-gold);
+    font-weight: 700;
+}
+
+/* Inner Page Majestic Hero */
+.inner-page-hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(8, 43, 72, 0.96) 0%, rgba(5, 28, 48, 0.92) 60%, rgba(13, 59, 97, 0.88) 100%),
+                url('../images/bayraq-meydani-naxcivan.jpg') center/cover no-repeat;
+    padding: 56px 0 64px;
+    color: #ffffff;
+    border-bottom: 3px solid var(--arpsn-gold);
+    overflow: hidden;
+}
+.inner-page-hero::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    bottom: -80px;
+    width: 380px;
+    height: 380px;
+    background: url('../images/momine-khatun-star.svg') center/contain no-repeat;
+    opacity: 0.12;
+    pointer-events: none;
+}
+.inner-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+}
+.inner-hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(185, 151, 85, 0.16);
+    color: #f7d994;
+    border: 1px solid rgba(185, 151, 85, 0.35);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.inner-hero-title {
+    font-family: 'Outfit', 'Cinzel', serif;
+    font-size: clamp(30px, 3.8vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 16px;
+    letter-spacing: -0.5px;
+}
+.inner-hero-lead {
+    font-size: 16.5px;
+    line-height: 1.65;
+    color: #e2eaf0;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* 2-Sütunlu İnstitusional Layout */
+.institutional-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 36px;
+    margin: 44px auto 72px;
+}
+
+/* Sidebar Menu */
+.inner-sidebar-sticky {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.sidebar-nav-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border);
+    border-top: 4px solid var(--arpsn-navy);
+    border-radius: var(--arpsn-radius);
+    box-shadow: var(--arpsn-shadow-sm);
+    overflow: hidden;
+}
+.sidebar-nav-header {
+    padding: 16px 20px;
+    background: #fbf9f5;
+    border-bottom: 1px solid var(--arpsn-border);
+    font-family: 'Outfit', sans-serif;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: var(--arpsn-navy);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.sidebar-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-nav-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 20px;
+    border-bottom: 1px solid #f1f4f6;
+    color: #435b6d;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.sidebar-nav-list li:last-child a {
+    border-bottom: none;
+}
+.sidebar-nav-list li a i {
+    font-size: 16px;
+    color: var(--arpsn-gold);
+    transition: transform 0.2s ease;
+}
+.sidebar-nav-list li a:hover,
+.sidebar-nav-list li a.active {
+    background: #fbf7ee;
+    color: var(--arpsn-navy);
+    border-left: 4px solid var(--arpsn-gold);
+    padding-left: 16px;
+    font-weight: 700;
+}
+.sidebar-nav-list li a:hover i,
+.sidebar-nav-list li a.active i {
+    transform: translateX(2px);
+    color: var(--arpsn-navy);
+}
+
+/* Sidebar Info Banner */
+.sidebar-contact-card {
+    background: linear-gradient(135deg, var(--arpsn-navy) 0%, #0d3b61 100%);
+    color: #ffffff;
+    padding: 24px;
+    border-radius: var(--arpsn-radius);
+    border: 1px solid rgba(185, 151, 85, 0.4);
+    box-shadow: var(--arpsn-shadow-md);
+}
+.sidebar-contact-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f7d994;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sidebar-contact-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #dbe5ec;
+    margin-bottom: 16px;
+}
+.sidebar-contact-card .btn-sidebar-appeal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: var(--arpsn-gold);
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+.sidebar-contact-card .btn-sidebar-appeal:hover {
+    background: var(--arpsn-gold-hover);
+}
+
+/* Content Area */
+.inner-content-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.content-section-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border);
+    border-radius: var(--arpsn-radius);
+    padding: 36px 40px;
+    box-shadow: var(--arpsn-shadow-sm);
+    scroll-margin-top: 100px;
+}
+
+.section-head-divider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #edf1f4;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+}
+.section-head-divider h2 {
+    font-family: 'Outfit', 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--arpsn-navy);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-head-divider h2 i {
+    color: var(--arpsn-gold);
+}
+.section-code-badge {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--arpsn-gold);
+    letter-spacing: 1px;
+    background: #faf6ed;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(185, 151, 85, 0.25);
+}
+
+/* Presidential Quote Highlight */
+.decree-quote-box {
+    background: #faf7f0;
+    border-left: 4px solid var(--arpsn-gold);
+    padding: 20px 24px;
+    border-radius: 0 6px 6px 0;
+    margin: 20px 0;
+}
+.decree-quote-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3b5062;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Rəhbərlik Kartı */
+.leader-official-card {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 32px;
+    background: #fdfcf9;
+    border: 1px solid #e5ecef;
+    border-radius: 8px;
+    padding: 28px;
+    align-items: start;
+    margin-top: 20px;
+}
+.leader-img-box {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid var(--arpsn-gold);
+    box-shadow: var(--arpsn-shadow-md);
+}
+.leader-img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.leader-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--arpsn-navy);
+    margin: 0 0 6px;
+}
+.leader-post {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--arpsn-gold);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+.leader-bio p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #4a5e6d;
+    margin-bottom: 12px;
+}
+.reception-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    background: #ffffff;
+    border: 1px solid #e7edf0;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 18px;
+}
+.rec-meta-item strong {
+    display: block;
+    font-size: 12px;
+    color: var(--arpsn-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+.rec-meta-item span {
+    font-size: 13.5px;
+    color: #475a68;
+    font-weight: 600;
+}
+
+/* Struktur Sxemi */
+.org-structure-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+.org-node-head {
+    background: var(--arpsn-navy);
+    color: #ffffff;
+    padding: 18px 24px;
+    border-radius: 6px;
+    border-left: 5px solid var(--arpsn-gold);
+    text-align: center;
+    box-shadow: var(--arpsn-shadow-sm);
+}
+.org-node-head h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+}
+.org-node-head span {
+    font-size: 13px;
+    color: #f4d389;
+    font-weight: 600;
+}
+.org-departments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+.dept-card {
+    background: #fdfdfd;
+    border: 1px solid #e5ecef;
+    border-top: 3px solid #0d3b61;
+    border-radius: 6px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dept-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--arpsn-shadow-md);
+    border-top-color: var(--arpsn-gold);
+}
+.dept-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--arpsn-navy);
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dept-card h5 i {
+    color: var(--arpsn-gold);
+}
+.dept-card p {
+    font-size: 13.5px;
+    color: #556977;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Hüquqi Əsaslar Siyahısı */
+.legal-basis-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 18px;
+}
+.legal-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 20px;
+    background: #fcfcfc;
+    border: 1px solid #e6ecf0;
+    border-radius: 6px;
+    align-items: center;
+}
+.legal-item-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(8, 43, 72, 0.07);
+    color: var(--arpsn-navy);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.legal-item-info {
+    flex-grow: 1;
+}
+.legal-item-info h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--arpsn-navy);
+    margin: 0 0 4px;
+}
+.legal-item-info p {
+    font-size: 13px;
+    color: #637785;
+    margin: 0;
+}
+.legal-item-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--arpsn-navy);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #d4dfe5;
+    border-radius: 4px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+.legal-item-link:hover {
+    background: var(--arpsn-navy);
+    color: #ffffff;
+    border-color: var(--arpsn-navy);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .institutional-layout {
+        grid-template-columns: 1fr;
+    }
+    .inner-sidebar-sticky {
+        position: static;
+    }
+    .leader-official-card {
+        grid-template-columns: 1fr;
+    }
+    .leader-img-box {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .org-departments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .content-section-card {
+        padding: 24px 20px;
+    }
+    .reception-meta-grid {
+        grid-template-columns: 1fr;
+    }
+}

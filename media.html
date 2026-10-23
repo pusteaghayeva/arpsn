@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#082B48">
+    <title>Media və Mətbuat Mərkəzi — ARPSN</title>
+    <meta name="description"
+        content="Naxçıvan Muxtar Respublikasında Azərbaycan Respublikası Prezidentinin Səlahiyyətli Nümayəndəliyinin rəsmi xəbərləri, fotoxronikası, video hesabatları və mətbuat açıqlamaları.">
+    <meta http-equiv="refresh" content="0; url=news.html">
+    <script>window.location.replace("news.html");</script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="src/img/dovlet-gerbi.svg" type="image/svg+xml">
+
+    <!-- Rəsmi CDN Resursları: Font Awesome, Bootstrap Icons, Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&subset=latin,latin-ext&display=swap" rel="stylesheet">
+
+    <!-- CERT Rəsmi Müyəssərlik Vidceti CDN (nmincom.gov.az standartı) -->
+    <script src="https://accessibility.cert.gov.az/acc-widget.min.js" defer></script>
+
+    <!-- Qlobal və Səhifəyə Xüsusi Stillər -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/media.css">
+</head>
+
+<body>
+    <!-- WCAG 2.2 AA Skip Link -->
+    <a href="#mainContent" class="skip-to-content">Əsas məzmuna keçid</a>
+
+    <!-- ======================================================================== -->
+    <!-- 01. HEADER: TOPBAR & PRESIDENTIAL MASTHEAD                                -->
+    <!-- ======================================================================== -->
+    <header>
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="container top-header-inner">
+                <div class="top-header-left">
+                    <span id="topAddress"><i class="bi bi-geo-alt-fill"></i> Naxçıvan şəhəri, Heydər Əliyev prospekti 50</span>
+                    <span class="top-divider">|</span>
+                    <span id="topHotline"><i class="bi bi-telephone-fill"></i> Qaynar xətt: (036) 545-00-00</span>
+                </div>
+                <div class="top-header-center">
+                    <ul class="top-social-links" aria-label="Rəsmi sosial şəbəkələr">
+                        <li><a href="https://president.az" target="_blank" rel="noopener noreferrer"
+                                title="Azərbaycan Respublikasının Prezidenti"><i class="fa-solid fa-landmark"></i></a>
+                        </li>
+                        <li><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="top-header-right">
+                    <!-- Dil seçimi (AZ / EN / RU) -->
+                    <div class="top-langs" id="topLangs" aria-label="Dil seçimi">
+                        <button type="button" class="lang-btn active" data-lang="az">AZ</button>
+                        <button type="button" class="lang-btn" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+                    </div>
+                    <!-- Sayt üzrə Axtarış Düyməsi -->
+                    <button type="button" class="top-search-btn" id="topSearchBtn"
+                        onclick="openSearchModal()" aria-label="Sayt üzrə axtarış">
+                        <i class="bi bi-search"></i> <span id="mastheadSearchTxt">Axtarış</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Presidential Masthead (Bənd 4: Sol: Gerb+Ad, Sağ: Genişləndirilmiş Sitat+Foto) -->
+        <div class="masthead-arpsn">
+            <div class="container">
+                <div class="masthead-grid">
+                    <!-- Sol: təsdiqlənmiş dövlət gerbi və qurumun tam adı -->
+                    <a class="masthead-identity" href="index.html" aria-label="ARPSN Ana Səhifə">
+                        <img src="https://static.president.az/images/pages/gerb.svg"
+                            alt="Azərbaycan Respublikasının Dövlət Gerbi" class="gerb-img" width="78" height="92">
+                        <div class="identity-text">
+                            <small id="identKicker">AZƏRBAYCAN RESPUBLİKASI PREZİDENTİNİN</small>
+                            <strong id="identTitle">Naxçıvan Muxtar Respublikasında<br>Səlahiyyətli
+                                Nümayəndəliyi</strong>
+                        </div>
+                    </a>
+
+                    <!-- Mərkəz və Sağ: Prezidentin sitatı (Kəlamı) və rəsmi fotosu - genişləndirilmiş -->
+                    <div class="president-quote-box">
+                        <blockquote>
+                            <span id="presidentQuote">“Naxçıvan, eyni zamanda, Azərbaycana bir çox görkəmli şəxsiyyətlər
+                                bəxş edib. Naxçıvan Azərbaycan xalqına dahi şəxsiyyət Heydər Əliyev kimi Ulu Öndər bəxş
+                                edib”.</span>
+                            <cite id="presidentCite">— İlham Əliyev</cite>
+                        </blockquote>
+                        <img src="https://static.president.az/upload/1562x1100/2018/03/05/2d5g5d0afw_368.jpg"
+                            alt="Azərbaycan Respublikasının Prezidenti İlham Əliyev" class="president-photo" width="86"
+                            height="96">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================================================== -->
+    <!-- 02. ƏSAS NAVİQASİYA (BƏND 4 DƏQİQ MENYU TƏLƏBİ)                          -->
+    <!-- Menyu: Ana səhifə; Nümayəndəlik; Fəaliyyət; Sənədlər; Naxçıvan; Media;   -->
+    <!-- Vətəndaşlar üçün; Əlaqə                                                 -->
+    <!-- ======================================================================== -->
+    <nav class="navbar-details" aria-label="Əsas Menyu">
+        <div class="container nav-inner-box">
+            <button class="navbar-toggler-cw" id="mainMenuToggle" aria-label="Menyunu aç/bağla">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="navbar-nav" id="mainNavList">
+                <!-- 1. Ana səhifə -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html" id="navLinkHome">Ana səhifə</a>
+                </li>
+
+                <!-- 2. Nümayəndəlik -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" id="navLinkRep">
+                        Nümayəndəlik <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="about.html"><i class="bi bi-info-circle"></i>
+                                Haqqında və Missiya</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="statute.html"><i class="bi bi-journal-text"></i>
+                                Hüquqi Əsaslar (Fərman № 1921)</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="leadership.html"><i class="bi bi-person-badge"></i>
+                                Səlahiyyətli Nümayəndə (Ceyhun Cəlilov)</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="structure.html"><i class="bi bi-diagram-3"></i>
+                                Nümayəndəliyin Aparat Strukturu</a></li>
+                    </ul>
+                </li>
+
+                <!-- 3. Fəaliyyət -->
+                <li class="nav-item">
+                    <a class="nav-link" href="activity.html" id="navLinkAct">
+                        Fəaliyyət <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="state-program.html"><i class="bi bi-calendar3-range"></i>
+                                2023–2027 Dövlət Proqramı</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="projects.html"><i class="bi bi-buildings"></i> Regional
+                                İnkişaf Layihələri</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="coordination.html"><i class="bi bi-diagram-2"></i>
+                                Qurumlararası Koordinasiya</a></li>
+                    </ul>
+                </li>
+
+                <!-- 4. Sənədlər -->
+                <li class="nav-item">
+                    <a class="nav-link" href="documents.html" id="navLinkDocs">
+                        Sənədlər <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="documents.html"><i class="bi bi-folder2-open"></i> Bütün
+                                Rəsmi Sənədlər</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="statute.html"><i class="bi bi-file-earmark-check"></i>
+                                Fərman və Əsasnamə</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="state-program.html"><i class="bi bi-file-earmark-text"></i>
+                                Dövlət Proqramları</a></li>
+                    </ul>
+                </li>
+
+                <!-- 5. Naxçıvan -->
+                <li class="nav-item">
+                    <a class="nav-link" href="nakhchivan.html" id="navLinkNakh">
+                        Naxçıvan <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="nakhchivan-history.html"><i class="bi bi-info-square"></i>
+                                Ümumi Məlumat və Tarixi İrs</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="districts.html"><i class="bi bi-map-fill"></i> Rayonlar və
+                                İnteraktiv Xəritə</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="statistics.html"><i class="bi bi-bar-chart-fill"></i>
+                                Rəsmi Statistika və Göstəricilər</a></li>
+                    </ul>
+                </li>
+
+                <!-- 6. Media -->
+                <li class="nav-item">
+                    <a class="nav-link" href="media.html" id="navLinkMedia">
+                        Media <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="news.html"><i class="bi bi-newspaper"></i> Son
+                                Xəbərlər</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="photo-gallery.html"><i class="bi bi-images"></i>
+                                Fotoxronika</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="video-gallery.html"><i class="bi bi-camera-reels"></i>
+                                Video Reportajlar</a></li>
+                    </ul>
+                </li>
+
+                <!-- 7. Vətəndaşlar üçün -->
+                <li class="nav-item">
+                    <a class="nav-link" href="citizens.html" id="navLinkCit">
+                        Vətəndaşlar üçün <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="e-appeal.html"><i
+                                    class="bi bi-envelope-paper-fill"></i> Elektron Müraciət Göndər</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="reception-schedule.html"><i
+                                    class="bi bi-calendar-check-fill"></i> Qəbul Qrafiki və Günləri</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="reception-booking.html"><i
+                                    class="bi bi-person-check-fill"></i> Qəbula Onlayn Yazılma</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="appeal-status.html"><i class="bi bi-search"></i> Müraciət
+                                Statusunu Yoxla</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="faq.html"><i
+                                    class="bi bi-question-circle"></i> Tez-tez Verilən Suallar (FAQ)</a></li>
+                    </ul>
+                </li>
+
+                <!-- 8. Əlaqə -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" id="navLinkContact">Əlaqə</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======================================================================== -->
+    <!-- BREADCRUMB STRIP                                                         -->
+    <!-- ======================================================================== -->
+    <div class="inner-breadcrumb-strip">
+        <div class="container">
+            <ol>
+                <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Ana səhifə</a></li>
+                <li><i class="bi bi-chevron-right" style="font-size: 10px;"></i></li>
+                <li class="active">Media və Mətbuat Mərkəzi</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ======================================================================== -->
+    <!-- INNER HERO BANNER                                                        -->
+    <!-- ======================================================================== -->
+    <section class="inner-page-hero">
+        <div class="container inner-hero-content">
+            <span class="inner-hero-kicker"><i class="bi bi-broadcast"></i> İCTİMAİYYƏTLƏ ƏLAQƏLƏR VƏ MƏTBUAT ŞƏBƏKƏSİ</span>
+            <h1 class="inner-hero-title">Media və Mətbuat Mərkəzi</h1>
+            <p class="inner-hero-lead">
+                Səlahiyyətli Nümayəndəliyin gündəlik fəaliyyəti, rəsmi qərarlar, regional tədbirlər, fotoxronika və video hesabatların operativ mənbəyi.
+            </p>
+        </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- ƏSAS MƏZMUN VƏ SİDEBAR LAYOUT                                            -->
+    <!-- ======================================================================== -->
+    <main class="container" id="mainContent">
+        <div class="institutional-layout">
+            <!-- Sol: Naviqasiya Sidebarı -->
+            <aside class="inner-sidebar-sticky">
+                <div class="sidebar-nav-card">
+                    <div class="sidebar-nav-header">
+                        <i class="bi bi-list-columns-reverse me-1 text-gold"></i> BÖLMƏLƏR
+                    </div>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="#xeberler" class="active"><i class="bi bi-newspaper"></i> Rəsmi Xəbərlər</a></li>
+                        <li><a href="#fotoxronika"><i class="bi bi-images"></i> Fotoxronika</a></li>
+                        <li><a href="#videolar"><i class="bi bi-camera-reels"></i> Video Reportajlar</a></li>
+                        <li><a href="#metbuat"><i class="bi bi-megaphone-fill"></i> Mətbuat Xidməti</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mətbuat üçün Əlaqə Qutusu -->
+                <div class="p-3 bg-white rounded border border-light-subtle shadow-sm mt-3">
+                    <h5 style="font-size: 14px; font-weight: 700; color: var(--arpsn-navy, #082B48); margin-bottom: 8px;">
+                        <i class="bi bi-mic-fill text-gold me-1"></i> Media Sorğuları
+                    </h5>
+                    <p style="font-size: 12.5px; color: #556980; line-height: 1.55; margin-bottom: 12px;">
+                        KİV nümayəndələri rəsmi müsahibə və məlumat sorğularını mətbuat xidmətinə ünvanlaya bilərlər.
+                    </p>
+                    <a href="mailto:media@arpsn.gov.az" class="btn btn-sm" style="background: var(--arpsn-navy, #082B48); color: #ffffff; font-size: 12px; width: 100%;">
+                        <i class="bi bi-envelope me-1"></i> media@arpsn.gov.az
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Sağ: Əsas Məzmun -->
+            <div class="inner-content-col">
+                <!-- 01. Rəsmi Xəbərlər Bölməsi -->
+                <section id="xeberler">
+                    <div class="section-title-wrap mb-4">
+                        <span class="section-subtitle-cw">OPERATİV VƏ ETİBARLI MƏLUMAT</span>
+                        <h2 style="font-size: 24px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Rəsmi Xəbərlər və Xronika</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+
+                    <!-- Filter və Axtarış Zolağı -->
+                    <div class="media-filter-bar">
+                        <div class="media-category-tabs" role="tablist">
+                            <button type="button" class="media-tab-btn active" data-cat="all">Hamısı</button>
+                            <button type="button" class="media-tab-btn" data-cat="official">Rəsmi Xronika</button>
+                            <button type="button" class="media-tab-btn" data-cat="program">Dövlət Proqramı</button>
+                            <button type="button" class="media-tab-btn" data-cat="events">Tədbirlər</button>
+                        </div>
+                        <div class="media-search-input-box">
+                            <i class="bi bi-search"></i>
+                            <input type="text" id="mediaSearchInput" placeholder="Xəbərlərdə axtarış...">
+                        </div>
+                    </div>
+
+                    <!-- Boş Axtarış Bildirişi -->
+                    <div id="mediaEmptyAlert" style="display: none; padding: 30px; text-align: center; background: #ffffff; border: 1px dashed #c0d0dc; border-radius: 8px; margin-bottom: 30px;">
+                        <i class="bi bi-search text-muted" style="font-size: 32px;"></i>
+                        <h4 style="font-size: 16px; color: var(--arpsn-navy, #082B48); margin-top: 10px;">Axtarışa uyğun xəbər tapılmadı</h4>
+                        <p style="font-size: 13px; color: #6a7d90; margin-bottom: 0;">Zəhmət olmasa başqa açar söz və ya filtr seçin.</p>
+                    </div>
+
+                    <!-- Xəbərlər Şəbəkəsi (Grid) -->
+                    <div class="news-grid">
+                        <!-- Xəbər 1 -->
+                        <article class="news-card-arpsn" data-cat="official">
+                            <div class="news-card-thumb">
+                                <img src="src/images/ceyhun-calilov-official.png" alt="Səlahiyyətli Nümayəndənin Müşavirəsi">
+                                <span class="news-badge">Rəsmi Xronika</span>
+                            </div>
+                            <div class="news-card-body">
+                                <div class="news-meta-row">
+                                    <span><i class="bi bi-calendar3"></i> 22 Oktyabr 2026</span>
+                                    <span><i class="bi bi-clock"></i> 3 dəq oxu</span>
+                                </div>
+                                <h3 class="news-card-title">
+                                    <a href="#">Səlahiyyətli Nümayəndə Ceyhun Cəlilovun rəhbərliyi ilə icra intizamı və regional layihələr üzrə müşavirə keçirilib</a>
+                                </h3>
+                                <p class="news-card-excerpt">
+                                    Nümayəndəlikdə keçirilən toplantıda dövlət orqanlarının qarşılıqlı fəaliyyəti, vətəndaş müraciətlərinin cavablandırılması və investisiya layihələrinin gedişi müzakirə edilib.
+                                </p>
+                                <div class="news-card-footer">
+                                    <span class="news-read-more">Ətraflı oxu <i class="bi bi-arrow-right"></i></span>
+                                    <i class="bi bi-share text-muted" title="Paylaş"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Xəbər 2 -->
+                        <article class="news-card-arpsn" data-cat="program">
+                            <div class="news-card-thumb">
+                                <img src="src/images/layihe-yasil-enerji.jpg" alt="Yaşıl Enerji Layihələri">
+                                <span class="news-badge">Dövlət Proqramı</span>
+                            </div>
+                            <div class="news-card-body">
+                                <div class="news-meta-row">
+                                    <span><i class="bi bi-calendar3"></i> 19 Oktyabr 2026</span>
+                                    <span><i class="bi bi-clock"></i> 4 dəq oxu</span>
+                                </div>
+                                <h3 class="news-card-title">
+                                    <a href="#">Naxçıvanda 500 MVt gücündə günəş və külək enerjisi stansiyalarının inşası sürətləndirilir</a>
+                                </h3>
+                                <p class="news-card-excerpt">
+                                    2023–2027-ci illər Dövlət Proqramı çərçivəsində Naxçıvanın "Yaşıl Enerji Zonası"na çevrilməsi və Türkiyəyə enerji ixracı xəttinin tikinti qrafiki təsdiqlənib.
+                                </p>
+                                <div class="news-card-footer">
+                                    <span class="news-read-more">Ətraflı oxu <i class="bi bi-arrow-right"></i></span>
+                                    <i class="bi bi-share text-muted" title="Paylaş"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Xəbər 3 -->
+                        <article class="news-card-arpsn" data-cat="official">
+                            <div class="news-card-thumb">
+                                <img src="src/images/ali-meclis-bina.jpg" alt="Vətəndaş Qəbulu">
+                                <span class="news-badge">Rəsmi Xronika</span>
+                            </div>
+                            <div class="news-card-body">
+                                <div class="news-meta-row">
+                                    <span><i class="bi bi-calendar3"></i> 16 Oktyabr 2026</span>
+                                    <span><i class="bi bi-clock"></i> 2 dəq oxu</span>
+                                </div>
+                                <h3 class="news-card-title">
+                                    <a href="#">Səlahiyyətli Nümayəndəlikdə növbəti vətəndaş qəbulu keçirilib, müraciətlər nəzarətə götürülüb</a>
+                                </h3>
+                                <p class="news-card-excerpt">
+                                    Qəbul zamanı sosial təminat, məşğulluq və sahibkarlıq fəaliyyəti ilə bağlı daxil olan müraciətlər dinlənilib və dərhal həlli üçün aidiyyəti tapşırıqlar verilib.
+                                </p>
+                                <div class="news-card-footer">
+                                    <span class="news-read-more">Ətraflı oxu <i class="bi bi-arrow-right"></i></span>
+                                    <i class="bi bi-share text-muted" title="Paylaş"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Xəbər 4 -->
+                        <article class="news-card-arpsn" data-cat="program">
+                            <div class="news-card-thumb">
+                                <img src="src/images/layihe-senaye.jpg" alt="Sənaye Parkı İnvestisiyaları">
+                                <span class="news-badge">Dövlət Proqramı</span>
+                            </div>
+                            <div class="news-card-body">
+                                <div class="news-meta-row">
+                                    <span><i class="bi bi-calendar3"></i> 12 Oktyabr 2026</span>
+                                    <span><i class="bi bi-clock"></i> 3 dəq oxu</span>
+                                </div>
+                                <h3 class="news-card-title">
+                                    <a href="#">Naxçıvan Sənaye Məhəlləsində 4 yeni rezident müəssisə fəaliyyətə başlayır</a>
+                                </h3>
+                                <p class="news-card-excerpt">
+                                    Yeni istehsal sahələrində tikinti materialları, qablaşdırma və yüngül sənaye məhsulları istehsal olunacaq, yüzlərlə yeni daimi iş yeri açılacaq.
+                                </p>
+                                <div class="news-card-footer">
+                                    <span class="news-read-more">Ətraflı oxu <i class="bi bi-arrow-right"></i></span>
+                                    <i class="bi bi-share text-muted" title="Paylaş"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Xəbər 5 -->
+                        <article class="news-card-arpsn" data-cat="events">
+                            <div class="news-card-thumb">
+                                <img src="src/images/elinceqala-naxcivan.jpg" alt="Tarixi İrs Simpoziumu">
+                                <span class="news-badge">Tədbirlər</span>
+                            </div>
+                            <div class="news-card-body">
+                                <div class="news-meta-row">
+                                    <span><i class="bi bi-calendar3"></i> 08 Oktyabr 2026</span>
+                                    <span><i class="bi bi-clock"></i> 3 dəq oxu</span>
+                                </div>
+                                <h3 class="news-card-title">
+                                    <a href="#">Naxçıvanın 100 illik muxtariyyəti və qədim dövlətçilik ənənələrinə həsr olunmuş beynəlxalq elmi konfrans</a>
+                                </h3>
+                                <p class="news-card-excerpt">
+                                    Mötəbər tədbirdə yerli və xarici alimlər Naxçıvanın dünya mədəniyyətindəki rolunu və arxeoloji abidələrin elmi əhəmiyyətini müzakirə ediblər.
+                                </p>
+                                <div class="news-card-footer">
+                                    <span class="news-read-more">Ətraflı oxu <i class="bi bi-arrow-right"></i></span>
+                                    <i class="bi bi-share text-muted" title="Paylaş"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Xəbər 6 -->
+                        <article class="news-card-arpsn" data-cat="events">
+                            <div class="news-card-thumb">
+                                <img src="src/images/layihe-aqropark.jpg" alt="Aqrar İnkişaf və İxrac">
+                                <span class="news-badge">Tədbirlər</span>
+                            </div>
+                            <div class="news-card-body">
+                                <div class="news-meta-row">
+                                    <span><i class="bi bi-calendar3"></i> 03 Oktyabr 2026</span>
+                                    <span><i class="bi bi-clock"></i> 2 dəq oxu</span>
+                                </div>
+                                <h3 class="news-card-title">
+                                    <a href="#">Naxçıvan meyvə və aqrar məhsullarının xarici bazarlara ixracının genişləndirilməsi tədbirləri</a>
+                                </h3>
+                                <p class="news-card-excerpt">
+                                    Sahibkarlarla görüşdə logistika subsidiyaları, müasir soyuducu anbar kompleksləri və keyfiyyət sertifikatlaşdırılması dəstəkləri elan edilib.
+                                </p>
+                                <div class="news-card-footer">
+                                    <span class="news-read-more">Ətraflı oxu <i class="bi bi-arrow-right"></i></span>
+                                    <i class="bi bi-share text-muted" title="Paylaş"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 02. Fotoxronika Qalereyası -->
+                <section id="fotoxronika" class="mb-5">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">RƏSMİ FOTO ARXİVİ</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Fotoxronika</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+                    <p style="font-size: 14px; color: #556980; margin-bottom: 16px;">
+                        Böyütmək və ətraflı baxmaq üçün fotoşəkilin üzərinə klikləyin:
+                    </p>
+
+                    <div class="photogallery-grid">
+                        <div class="photo-item" tabindex="0" role="button" aria-label="Fotoya bax">
+                            <img src="src/images/ali-meclis-bina.jpg" alt="Naxçıvan İnzibati Mərkəzi">
+                            <div class="photo-overlay">
+                                <span>2026 · Naxçıvan</span>
+                                <h4>Muxtar Respublikanın İnzibati Binası</h4>
+                            </div>
+                        </div>
+
+                        <div class="photo-item" tabindex="0" role="button" aria-label="Fotoya bax">
+                            <img src="src/images/ceyhun-calilov-official.png" alt="Səlahiyyətli Nümayəndə">
+                            <div class="photo-overlay">
+                                <span>Rəsmi Portret</span>
+                                <h4>Səlahiyyətli Nümayəndə Ceyhun Cəlilov</h4>
+                            </div>
+                        </div>
+
+                        <div class="photo-item" tabindex="0" role="button" aria-label="Fotoya bax">
+                            <img src="src/images/layihe-yasil-enerji.jpg" alt="Günəş Elektrik Stansiyası">
+                            <div class="photo-overlay">
+                                <span>İnvestisiya</span>
+                                <h4>Yaşıl Enerji Fotoelektrik Sahəsi</h4>
+                            </div>
+                        </div>
+
+                        <div class="photo-item" tabindex="0" role="button" aria-label="Fotoya bax">
+                            <img src="src/images/bayraq-meydani-naxcivan.jpg" alt="Dövlət Bayrağı Meydanı">
+                            <div class="photo-overlay">
+                                <span>Milli İrs</span>
+                                <h4>Dövlət Bayrağı Meydanı Kompleksi</h4>
+                            </div>
+                        </div>
+
+                        <div class="photo-item" tabindex="0" role="button" aria-label="Fotoya bax">
+                            <img src="src/images/layihe-aqropark.jpg" alt="Aqropark Sahəsi">
+                            <div class="photo-overlay">
+                                <span>Aqrar Sektor</span>
+                                <h4>Şərur və Babək Müasir Aqroparkları</h4>
+                            </div>
+                        </div>
+
+                        <div class="photo-item" tabindex="0" role="button" aria-label="Fotoya bax">
+                            <img src="src/images/elinceqala-naxcivan.jpg" alt="Əlincə Qalası İrsi">
+                            <div class="photo-overlay">
+                                <span>Tarixi Zirvə</span>
+                                <h4>Əlincə Qalası Qoruğu</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 03. Video Reportajlar -->
+                <section id="videolar" class="mb-5">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">XÜSUSİ REPORTAJLAR VƏ BRİFİNQLƏR</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Video Hesabatlar</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+
+                    <div class="videogallery-grid">
+                        <div class="video-card">
+                            <div class="video-thumb-wrap">
+                                <img src="src/images/media.jpg" alt="Video Hesabat 1">
+                                <div class="video-play-btn" role="button" aria-label="Videonu oynat">
+                                    <i class="bi bi-play-fill"></i>
+                                </div>
+                                <span class="video-duration">08:45</span>
+                            </div>
+                            <div class="video-info">
+                                <h4>Naxçıvanda 2023–2027 Dövlət Proqramının icra gedişatı: Rüblük Xüsusi Hesabat</h4>
+                                <p>Sənaye, energetika, kənd təsərrüfatı və infrastruktur quruculuğu üzrə əsas nailiyyətlər.</p>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-thumb-wrap">
+                                <img src="src/images/road.jpg" alt="Video Hesabat 2">
+                                <div class="video-play-btn" role="button" aria-label="Videonu oynat">
+                                    <i class="bi bi-play-fill"></i>
+                                </div>
+                                <span class="video-duration">05:12</span>
+                            </div>
+                            <div class="video-info">
+                                <h4>Zəngəzur Nəqliyyat Dəhlizi və Naxçıvanın Strateji Yol Şəbəkəsinin Yenilənməsi</h4>
+                                <p>Beynəlxalq magistral yolların yenidən qurulması və gömrük keçid imkanlarının artırılması.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 04. Mətbuat Xidməti və Akkreditasiya -->
+                <section id="metbuat" class="press-service-box">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div style="width: 44px; height: 44px; border-radius: 8px; background: var(--arpsn-navy, #082B48); color: var(--arpsn-gold, #B99755); display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 18px; font-weight: 800; color: var(--arpsn-navy, #082B48); margin: 0;">Mətbuat Xidməti və Akkreditasiya Qaydaları</h3>
+                            <span style="font-size: 13px; color: #5a6e82;">Kütləvi İnformasiya Vasitələri nümayəndələri üçün rəsmi təlimat</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.7; color: #435567;">
+                        Naxçıvan Muxtar Respublikasında Azərbaycan Respublikası Prezidentinin Səlahiyyətli Nümayəndəliyinin tədbirlərində iştirak etmək istəyən KİV nümayəndələri rəsmi müraciət məktubu və redaksiya vəsiqəsinin surətini təqdim etməklə daimi və ya müvəqqəti akkreditasiyadan keçə bilərlər.
+                    </p>
+                    <div class="row g-3 mt-1">
+                        <div class="col-md-6">
+                            <div class="p-2 bg-light rounded border text-muted small">
+                                <i class="bi bi-envelope-at text-gold me-2"></i> <strong>Rəsmi Press E-poçt:</strong> media@arpsn.gov.az
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2 bg-light rounded border text-muted small">
+                                <i class="bi bi-telephone-forward text-gold me-2"></i> <strong>Mətbuat Əlaqə:</strong> (036) 545-00-11
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================================================================== -->
+    <!-- 04. FOOTER                                                               -->
+    <!-- ======================================================================== -->
+    <footer id="elaqe" data-aos="fade-up">
+        <div class="container">
+            <!-- 4 Sütunlu Footer -->
+            <div class="footer-cols-four">
+                <!-- Sütun 1: Loqo və Qurum Məlumatı -->
+                <div class="footer-col">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="https://static.president.az/images/pages/gerb.svg" alt="Dövlət Gerbi" width="44"
+                            height="54">
+                        <div>
+                            <strong id="footerLogoTitle"
+                                style="color: #ffffff; font-size: 18px; font-weight: 800; letter-spacing: 0.8px; display: block; line-height: 1.1;">ARPSN</strong>
+                            <span style="font-size: 11.5px; font-weight: 600; color: var(--arpsn-gold, #B99755); display: block; line-height: 1.35; margin-top: 3px;">
+                                Azərbaycan Respublikası Prezidentinin Səlahiyyətli Nümayəndəliyi
+                            </span>
+                        </div>
+                    </div>
+                    <p id="footerDesc" style="font-size: 13px; line-height: 1.6; color: #9cb3c7; margin-bottom: 14px;">
+                        Naxçıvan Muxtar Respublikasında dövlət siyasətinin vahid mərkəzdən koordinasiyası və regional sosial-iqtisadi inkişafın təminatçısı olan ali rəsmi institut.
+                    </p>
+                </div>
+
+                <!-- Sütun 2: Rəsmi Keçidlər -->
+                <div class="footer-col">
+                    <h4 id="footerCol2Title">Rəsmi Keçidlər</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://president.az" target="_blank" rel="noopener noreferrer"><i
+                                    class="bi bi-chevron-right"></i> Azərbaycan Respublikası Prezidenti</a></li>
+                        <li><a href="https://president.az/az/articles/view/58279" target="_blank"
+                                rel="noopener noreferrer"><i class="bi bi-chevron-right"></i> Nümayəndəliyin
+                                Əsasnaməsi</a></li>
+                        <li><a href="https://heydar-aliyev-foundation.org" target="_blank" rel="noopener noreferrer"><i
+                                    class="bi bi-chevron-right"></i> Heydər Əliyev Fondu</a></li>
+                        <li><a href="#dovlet-proqramlari" onclick="openSubView('act-prog');return false;"><i
+                                    class="bi bi-chevron-right"></i> 2023–2027 Dövlət Proqramı</a></li>
+                        <li><a href="#aparat" onclick="openSubView('rep-structure');return false;"><i
+                                    class="bi bi-chevron-right"></i> Nümayəndəliyin Aparat Strukturu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sütun 3: Vətəndaş Xidmətləri -->
+                <div class="footer-col">
+                    <h4 id="footerCol3Title">Vətəndaş Xidmətləri</h4>
+                    <ul class="footer-links">
+                        <li><a href="#muraciet" onclick="openSubView('cit-appeal');return false;"><i
+                                    class="bi bi-chevron-right"></i> Elektron Müraciət Xidməti</a></li>
+                        <li><a href="#qebul" onclick="openSubView('cit-schedule');return false;"><i
+                                    class="bi bi-chevron-right"></i> Vətəndaşların Qəbul Qaydaları</a></li>
+                        <li><a href="#qebula-yazilma" onclick="openSubView('cit-booking');return false;"><i
+                                    class="bi bi-chevron-right"></i> Qəbula Onlayn Yazılma</a></li>
+                        <li><a href="#muraciet-status" onclick="openSubView('cit-status');return false;"><i
+                                    class="bi bi-chevron-right"></i> Müraciət Statusunu Yoxla</a></li>
+                        <li><a href="#faq" onclick="openSubView('cit-faq');return false;"><i
+                                    class="bi bi-chevron-right"></i> Tez-tez Verilən Suallar (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sütun 4: Əlaqə və İş Qrafiki -->
+                <div class="footer-col">
+                    <h4 id="footerCol4Title">Rəsmi Əlaqə</h4>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt-fill"></i> <span id="footerAddress">AZ 7000, Naxçıvan şəhəri, Heydər
+                                Əliyev prospekti 50</span></li>
+                        <li><i class="bi bi-telephone-fill"></i> <span id="footerHotline">Qaynar xətt: (036)
+                                545-00-00</span></li>
+                        <li><i class="bi bi-envelope-fill"></i> <span>office@arpsn.gov.az</span></li>
+                        <li><i class="bi bi-clock-fill"></i> <span id="footerHours">B.e. - C. 09:00 - 18:00 (Nahar:
+                                13:00 - 14:00)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subfooter -->
+            <div class="term-and-condition">
+                <div class="subfooter-inner" style="justify-content: center; text-align: center;">
+                    <span id="footerCopy" style="color: #9cb3c7; font-size: 13px; letter-spacing: 0.3px;">© 2026
+                        Azərbaycan Respublikası Prezidentinin Naxçıvan Muxtar Respublikasında Səlahiyyətli
+                        Nümayəndəliyi. Bütün hüquqlar qorunur.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Progress Button -->
+    <div class="progress-wrap" id="progressWrap" role="button" aria-label="Səhifənin əvvəlinə qayıt" tabindex="0">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/media.js" defer></script>
+</body>
+
+</html>
+
+
+

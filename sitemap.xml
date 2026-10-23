@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- Ana Səhifə (Home) -->
+    <url>
+        <loc>https://arpsn.gov.az/</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arpsn.gov.az/en/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://arpsn.gov.az/ru/"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Nümayəndəlik (Representation) -->
+    <url>
+        <loc>https://arpsn.gov.az/representation.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/representation.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Fəaliyyət (Activity & Projects) -->
+    <url>
+        <loc>https://arpsn.gov.az/activity.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/activity.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Rəsmi Sənədlər (Documents) -->
+    <url>
+        <loc>https://arpsn.gov.az/documents.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/documents.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Naxçıvan Muxtar Respublikası (Nakhchivan) -->
+    <url>
+        <loc>https://arpsn.gov.az/nakhchivan.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/nakhchivan.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Media və Mətbuat Mərkəzi (Media) -->
+    <url>
+        <loc>https://arpsn.gov.az/media.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/media.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Vətəndaşlar üçün (Citizens) -->
+    <url>
+        <loc>https://arpsn.gov.az/citizens.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/citizens.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Əlaqə (Contact) -->
+    <url>
+        <loc>https://arpsn.gov.az/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="https://arpsn.gov.az/contact.html"/>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>

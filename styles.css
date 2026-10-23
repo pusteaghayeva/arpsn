@@ -1,0 +1,13 @@
+/**
+ * ARPSN - Rəsmi İnternet Portalı
+ * Köhnə Stillər Körpüsü (Legacy CSS Bridge)
+ * 
+ * Bütün aktiv dizayn sistemi və modul CSS faylları:
+ * - src/css/main.css
+ * - src/css/home.css
+ * - src/css/daxili.css
+ * - src/css/news.css
+ * - src/css/pres.css
+ */
+@import url('src/css/main.css');
+@import url('src/css/home.css');

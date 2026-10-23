@@ -1,0 +1,109 @@
+/* ==========================================================================
+   QƏBUL QRAFİKİ (src/css/reception-schedule.css)
+   Dizayn konsepti: Rəsmi Qəbul Cədvəli, Şöbələr, CTA Yazılma
+   ========================================================================== */
+
+.sched-hero-box {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 18px rgba(8, 43, 72, 0.05);
+}
+
+.sched-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+}
+
+.sched-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--arpsn-text-muted, #536474);
+    max-width: 850px;
+    margin: 0;
+}
+
+/* Cədvəl Kartı */
+.sched-table-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(8, 43, 72, 0.06);
+    margin-bottom: 35px;
+}
+
+.sched-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sched-table th {
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.sched-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #ebe5dc;
+    font-size: 14.5px;
+    color: #334455;
+    vertical-align: middle;
+}
+
+.sched-table tr:hover td {
+    background: #fbf9f6;
+}
+
+.sched-vip-badge {
+    display: inline-block;
+    background: #f4ecdf;
+    color: #795e28;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.sched-cta-banner {
+    background: linear-gradient(135deg, var(--arpsn-navy, #082B48) 0%, #0d3b61 100%);
+    border-radius: 12px;
+    padding: 32px 40px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border: 1px solid rgba(185, 151, 85, 0.35);
+}
+
+.sched-cta-btn {
+    padding: 12px 28px;
+    background: var(--arpsn-gold, #B99755);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.sched-cta-btn:hover {
+    background: #9c7b39;
+    color: #ffffff;
+    transform: translateY(-2px);
+}

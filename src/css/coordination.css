@@ -1,0 +1,162 @@
+/* ==========================================================================
+   QURUMLARARASI KOORDİNASİYA ŞURASI (src/css/coordination.css)
+   Dizayn konsepti: İdarəetmə Şurası, İşçi Qrupları, İclas Protokolları
+   ========================================================================== */
+
+.coord-hero {
+    background: linear-gradient(135deg, var(--arpsn-navy, #082B48) 0%, #0e3d65 100%);
+    border-radius: 12px;
+    padding: 35px 40px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    border: 1px solid rgba(185, 151, 85, 0.35);
+    box-shadow: 0 8px 24px rgba(8, 43, 72, 0.12);
+}
+
+.coord-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.coord-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #d1dde6;
+    max-width: 850px;
+    margin: 0;
+}
+
+/* Şuranın Rəhbər Heyəti */
+.coord-board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 45px;
+}
+
+.coord-member-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(8, 43, 72, 0.04);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.coord-member-card:hover {
+    border-color: var(--arpsn-gold, #B99755);
+    box-shadow: 0 10px 24px rgba(8, 43, 72, 0.09);
+    transform: translateY(-4px);
+}
+
+.coord-role-badge {
+    align-self: flex-start;
+    background: #f4ecdf;
+    color: #795e28;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.coord-member-name {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 6px;
+}
+
+.coord-member-title {
+    font-size: 13.5px;
+    color: #556677;
+    line-height: 1.5;
+}
+
+/* İşçi Qrupları */
+.coord-groups-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 45px;
+}
+
+.coord-group-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-left: 4px solid var(--arpsn-gold, #B99755);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(8, 43, 72, 0.04);
+}
+
+.coord-group-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coord-group-title i {
+    color: var(--arpsn-gold, #B99755);
+}
+
+.coord-group-desc {
+    font-size: 14px;
+    color: #556677;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.coord-group-lead {
+    font-size: 13px;
+    color: #082B48;
+    background: #fbf9f6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Protokollar Cədvəli */
+.coord-table-wrap {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.05);
+    margin-bottom: 40px;
+}
+
+.coord-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.coord-table th {
+    background: #082B48;
+    color: #ffffff;
+    padding: 14px 18px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 13.5px;
+}
+
+.coord-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ebe5dc;
+    color: #334455;
+    vertical-align: middle;
+}
+
+.coord-table tr:hover td {
+    background: #fdfaf5;
+}

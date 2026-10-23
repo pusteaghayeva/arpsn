@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#082B48">
+    <title>Naxçıvan Muxtar Respublikası — ARPSN</title>
+    <meta name="description"
+        content="Naxçıvan Muxtar Respublikasının dövlətçilik tarixi, coğrafiyası, inzibati ərazi bölgüsü (8 rayon), iqtisadi potensialı və rəsmi statistikası.">
+    <meta http-equiv="refresh" content="0; url=nakhchivan-history.html">
+    <script>window.location.replace("nakhchivan-history.html");</script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="src/img/dovlet-gerbi.svg" type="image/svg+xml">
+
+    <!-- Rəsmi CDN Resursları: Font Awesome, Bootstrap Icons, Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&subset=latin,latin-ext&display=swap" rel="stylesheet">
+
+    <!-- CERT Rəsmi Müyəssərlik Vidceti CDN (nmincom.gov.az standartı) -->
+    <script src="https://accessibility.cert.gov.az/acc-widget.min.js" defer></script>
+
+    <!-- Qlobal və Səhifəyə Xüsusi Stillər -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/nakhchivan.css">
+</head>
+
+<body>
+    <!-- WCAG 2.2 AA Skip Link -->
+    <a href="#mainContent" class="skip-to-content">Əsas məzmuna keçid</a>
+
+    <!-- ======================================================================== -->
+    <!-- 01. HEADER: TOPBAR & PRESIDENTIAL MASTHEAD                                -->
+    <!-- ======================================================================== -->
+    <header>
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="container top-header-inner">
+                <div class="top-header-left">
+                    <span id="topAddress"><i class="bi bi-geo-alt-fill"></i> Naxçıvan şəhəri, Heydər Əliyev prospekti 50</span>
+                    <span class="top-divider">|</span>
+                    <span id="topHotline"><i class="bi bi-telephone-fill"></i> Qaynar xətt: (036) 545-00-00</span>
+                </div>
+                <div class="top-header-center">
+                    <ul class="top-social-links" aria-label="Rəsmi sosial şəbəkələr">
+                        <li><a href="https://president.az" target="_blank" rel="noopener noreferrer"
+                                title="Azərbaycan Respublikasının Prezidenti"><i class="fa-solid fa-landmark"></i></a>
+                        </li>
+                        <li><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="top-header-right">
+                    <!-- Dil seçimi (AZ / EN / RU) -->
+                    <div class="top-langs" id="topLangs" aria-label="Dil seçimi">
+                        <button type="button" class="lang-btn active" data-lang="az">AZ</button>
+                        <button type="button" class="lang-btn" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+                    </div>
+                    <!-- Sayt üzrə Axtarış Düyməsi -->
+                    <button type="button" class="top-search-btn" id="topSearchBtn"
+                        onclick="openSearchModal()" aria-label="Sayt üzrə axtarış">
+                        <i class="bi bi-search"></i> <span id="mastheadSearchTxt">Axtarış</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Presidential Masthead (Bənd 4: Sol: Gerb+Ad, Sağ: Genişləndirilmiş Sitat+Foto) -->
+        <div class="masthead-arpsn">
+            <div class="container">
+                <div class="masthead-grid">
+                    <!-- Sol: təsdiqlənmiş dövlət gerbi və qurumun tam adı -->
+                    <a class="masthead-identity" href="index.html" aria-label="ARPSN Ana Səhifə">
+                        <img src="https://static.president.az/images/pages/gerb.svg"
+                            alt="Azərbaycan Respublikasının Dövlət Gerbi" class="gerb-img" width="78" height="92">
+                        <div class="identity-text">
+                            <small id="identKicker">AZƏRBAYCAN RESPUBLİKASI PREZİDENTİNİN</small>
+                            <strong id="identTitle">Naxçıvan Muxtar Respublikasında<br>Səlahiyyətli
+                                Nümayəndəliyi</strong>
+                        </div>
+                    </a>
+
+                    <!-- Mərkəz və Sağ: Prezidentin sitatı (Kəlamı) və rəsmi fotosu - genişləndirilmiş -->
+                    <div class="president-quote-box">
+                        <blockquote>
+                            <span id="presidentQuote">“Naxçıvan, eyni zamanda, Azərbaycana bir çox görkəmli şəxsiyyətlər
+                                bəxş edib. Naxçıvan Azərbaycan xalqına dahi şəxsiyyət Heydər Əliyev kimi Ulu Öndər bəxş
+                                edib”.</span>
+                            <cite id="presidentCite">— İlham Əliyev</cite>
+                        </blockquote>
+                        <img src="https://static.president.az/upload/1562x1100/2018/03/05/2d5g5d0afw_368.jpg"
+                            alt="Azərbaycan Respublikasının Prezidenti İlham Əliyev" class="president-photo" width="86"
+                            height="96">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================================================== -->
+    <!-- 02. ƏSAS NAVİQASİYA (BƏND 4 DƏQİQ MENYU TƏLƏBİ)                          -->
+    <!-- Menyu: Ana səhifə; Nümayəndəlik; Fəaliyyət; Sənədlər; Naxçıvan; Media;   -->
+    <!-- Vətəndaşlar üçün; Əlaqə                                                 -->
+    <!-- ======================================================================== -->
+    <nav class="navbar-details" aria-label="Əsas Menyu">
+        <div class="container nav-inner-box">
+            <button class="navbar-toggler-cw" id="mainMenuToggle" aria-label="Menyunu aç/bağla">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="navbar-nav" id="mainNavList">
+                <!-- 1. Ana səhifə -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html" id="navLinkHome">Ana səhifə</a>
+                </li>
+
+                <!-- 2. Nümayəndəlik -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" id="navLinkRep">
+                        Nümayəndəlik <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="about.html"><i class="bi bi-info-circle"></i>
+                                Haqqında və Missiya</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="statute.html"><i class="bi bi-journal-text"></i>
+                                Hüquqi Əsaslar (Fərman № 1921)</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="leadership.html"><i class="bi bi-person-badge"></i>
+                                Səlahiyyətli Nümayəndə (Ceyhun Cəlilov)</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="structure.html"><i class="bi bi-diagram-3"></i>
+                                Nümayəndəliyin Aparat Strukturu</a></li>
+                    </ul>
+                </li>
+
+                <!-- 3. Fəaliyyət -->
+                <li class="nav-item">
+                    <a class="nav-link" href="activity.html" id="navLinkAct">
+                        Fəaliyyət <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="state-program.html"><i class="bi bi-calendar3-range"></i>
+                                2023–2027 Dövlət Proqramı</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="projects.html"><i class="bi bi-buildings"></i> Regional
+                                İnkişaf Layihələri</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="coordination.html"><i class="bi bi-diagram-2"></i>
+                                Qurumlararası Koordinasiya</a></li>
+                    </ul>
+                </li>
+
+                <!-- 4. Sənədlər -->
+                <li class="nav-item">
+                    <a class="nav-link" href="documents.html" id="navLinkDocs">
+                        Sənədlər <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="documents.html"><i class="bi bi-folder2-open"></i> Bütün
+                                Rəsmi Sənədlər</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="statute.html"><i class="bi bi-file-earmark-check"></i>
+                                Fərman və Əsasnamə</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="state-program.html"><i class="bi bi-file-earmark-text"></i>
+                                Dövlət Proqramları</a></li>
+                    </ul>
+                </li>
+
+                <!-- 5. Naxçıvan -->
+                <li class="nav-item">
+                    <a class="nav-link" href="nakhchivan.html" id="navLinkNakh">
+                        Naxçıvan <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="nakhchivan-history.html"><i class="bi bi-info-square"></i>
+                                Ümumi Məlumat və Tarixi İrs</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="districts.html"><i class="bi bi-map-fill"></i> Rayonlar və
+                                İnteraktiv Xəritə</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="statistics.html"><i class="bi bi-bar-chart-fill"></i>
+                                Rəsmi Statistika və Göstəricilər</a></li>
+                    </ul>
+                </li>
+
+                <!-- 6. Media -->
+                <li class="nav-item">
+                    <a class="nav-link" href="media.html" id="navLinkMedia">
+                        Media <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="news.html"><i class="bi bi-newspaper"></i> Son
+                                Xəbərlər</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="photo-gallery.html"><i class="bi bi-images"></i>
+                                Fotoxronika</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="video-gallery.html"><i class="bi bi-camera-reels"></i>
+                                Video Reportajlar</a></li>
+                    </ul>
+                </li>
+
+                <!-- 7. Vətəndaşlar üçün -->
+                <li class="nav-item">
+                    <a class="nav-link" href="citizens.html" id="navLinkCit">
+                        Vətəndaşlar üçün <i class="bi bi-chevron-down" style="font-size: 10px;"></i>
+                    </a>
+                    <ul class="dropdown-menu-cw">
+                        <li><a class="dropdown-item-cw" href="e-appeal.html"><i
+                                    class="bi bi-envelope-paper-fill"></i> Elektron Müraciət Göndər</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="reception-schedule.html"><i
+                                    class="bi bi-calendar-check-fill"></i> Qəbul Qrafiki və Günləri</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="reception-booking.html"><i
+                                    class="bi bi-person-check-fill"></i> Qəbula Onlayn Yazılma</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="appeal-status.html"><i class="bi bi-search"></i> Müraciət
+                                Statusunu Yoxla</a></li>
+                        <li>
+                            <div class="dropdown-divider-cw"></div>
+                        </li>
+                        <li><a class="dropdown-item-cw" href="faq.html"><i
+                                    class="bi bi-question-circle"></i> Tez-tez Verilən Suallar (FAQ)</a></li>
+                    </ul>
+                </li>
+
+                <!-- 8. Əlaqə -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" id="navLinkContact">Əlaqə</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======================================================================== -->
+    <!-- BREADCRUMB STRIP                                                         -->
+    <!-- ======================================================================== -->
+    <div class="inner-breadcrumb-strip">
+        <div class="container">
+            <ol>
+                <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Ana səhifə</a></li>
+                <li><i class="bi bi-chevron-right" style="font-size: 10px;"></i></li>
+                <li class="active">Naxçıvan Muxtar Respublikası</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ======================================================================== -->
+    <!-- INNER HERO BANNER                                                        -->
+    <!-- ======================================================================== -->
+    <section class="inner-page-hero">
+        <div class="container inner-hero-content">
+            <span class="inner-hero-kicker"><i class="bi bi-geo-alt-fill"></i> AZƏRBAYCANIN QƏDİM DİYARI VƏ STRATEGİK QALASI</span>
+            <h1 class="inner-hero-title">Naxçıvan Muxtar Respublikası</h1>
+            <p class="inner-hero-lead">
+                Əsrlərlə dövlətçilik ənənələrini qoruyan, dahi şəxsiyyətlər yetirən, zəngin təbii sərvətlərə və müasir inkişaf dinamikasına malik muxtar respublika.
+            </p>
+        </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- ƏSAS MƏZMUN VƏ SİDEBAR LAYOUT                                            -->
+    <!-- ======================================================================== -->
+    <main class="container" id="mainContent">
+        <div class="institutional-layout">
+            <!-- Sol: Naviqasiya Sidebarı -->
+            <aside class="inner-sidebar-sticky">
+                <div class="sidebar-nav-card">
+                    <div class="sidebar-nav-header">
+                        <i class="bi bi-list-columns-reverse me-1 text-gold"></i> BÖLMƏLƏR
+                    </div>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="#haqqinda" class="active"><i class="bi bi-info-circle"></i> Ümumi Məlumat</a></li>
+                        <li><a href="#statistika"><i class="bi bi-bar-chart-fill"></i> Naxçıvan Rəqəmlərdə</a></li>
+                        <li><a href="#tarix"><i class="bi bi-bank"></i> Tarixi və Mədəni İrs</a></li>
+                        <li><a href="#rayonlar"><i class="bi bi-map-fill"></i> İnzibati Rayonlar</a></li>
+                        <li><a href="#cografiya"><i class="bi bi-moisture"></i> Coğrafiya və Təbii Sərvətlər</a></li>
+                        <li><a href="#iqtisadiyyat"><i class="bi bi-lightning-charge-fill"></i> Yaşıl Enerji və İqtisadiyyat</a></li>
+                    </ul>
+                </div>
+
+                <!-- Əlavə Rəsmi Məlumat Qutusu -->
+                <div class="p-3 bg-white rounded border border-light-subtle shadow-sm mt-3">
+                    <h5 style="font-size: 14px; font-weight: 700; color: var(--arpsn-navy, #082B48); margin-bottom: 8px;">
+                        <i class="bi bi-award-fill text-gold me-1"></i> 100 İllik Yubiley
+                    </h5>
+                    <p style="font-size: 12.5px; color: #556980; line-height: 1.55; margin-bottom: 0;">
+                        Azərbaycan Respublikası Prezidenti İlham Əliyevin Sərəncamına əsasən Naxçıvan Muxtar Respublikasının 100 illik şərəfli yubileyi dövlət səviyyəsində qeyd olunur.
+                    </p>
+                </div>
+            </aside>
+
+            <!-- Sağ: Əsas Məzmun -->
+            <div class="inner-content-col">
+                <!-- 01. Ümumi Məlumat və Muxtar Respublika Statusu -->
+                <section id="haqqinda" class="nakh-overview-card">
+                    <div class="section-title-wrap mb-4">
+                        <span class="section-subtitle-cw">KONSTİTUSİON STATUS VƏ İDARƏETMƏ</span>
+                        <h2 style="font-size: 24px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Naxçıvan Muxtar Respublikası Haqqında</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+
+                    <div class="nakh-lead-quote">
+                        “Naxçıvan Muxtar Respublikası Azərbaycan Respublikasının tərkibində muxtar dövlətdir. 
+                        Muxtar Respublikanın statusu Azərbaycan Respublikasının Konstitusiyası və 1921-ci il Moskva və Qars beynəlxalq müqavilələri ilə təsbit edilmişdir.”
+                    </div>
+
+                    <p style="font-size: 15px; line-height: 1.8; color: #3b4d61;">
+                        Naxçıvan Muxtar Respublikası Azərbaycanın cənub-qərbində yerləşən, şimal və şərqdə Ermənistan (sərhəd xəttinin uzunluğu 246 km), cənub və qərbdə İran İslam Respublikası (204 km), şimal-qərbdə isə Türkiyə Cümhuriyyəti (11 km) ilə həmsərhəd olan strateji məkandır.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #3b4d61;">
+                        Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin 22 dekabr 2022-ci il tarixli Fərmanı ilə Naxçıvan Muxtar Respublikasında Azərbaycan Respublikası Prezidentinin Səlahiyyətli Nümayəndəliyi təsis olunmuş və idarəetmədə mütərəqqi islahatlar, iqtisadi canlanma və vətəndaş məmnuniyyəti dövrü başlamışdır.
+                    </p>
+                </section>
+
+                <!-- 02. Naxçıvan Rəqəmlərdə -->
+                <section id="statistika" class="nakh-overview-card">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">RƏSMİ STATİSTİK GÖSTƏRİCİLƏR</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Naxçıvan Rəqəmlərdə</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+
+                    <div class="nakh-stats-grid">
+                        <div class="nakh-stat-box">
+                            <div class="nakh-stat-val">5,502.75 <small>km²</small></div>
+                            <div class="nakh-stat-label">Ümumi Ərazi</div>
+                        </div>
+                        <div class="nakh-stat-box">
+                            <div class="nakh-stat-val">470,000+</div>
+                            <div class="nakh-stat-label">Əhali Sayı</div>
+                        </div>
+                        <div class="nakh-stat-box">
+                            <div class="nakh-stat-val">8</div>
+                            <div class="nakh-stat-label">İnzibati Ərazi Vahidi</div>
+                        </div>
+                        <div class="nakh-stat-box">
+                            <div class="nakh-stat-val">100 <small>il</small></div>
+                            <div class="nakh-stat-label">Muxtariyyət Tarixi</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 03. Tarixi və Mədəni İrs -->
+                <section id="tarix" class="nakh-overview-card">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">MİLLİ MƏDƏNİYYƏT VƏ DÜNYA İRSİ</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Tarixi və Memarlıq Abidələri</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+                    <p style="font-size: 14.5px; line-height: 1.7; color: #4a5c6d;">
+                        Naxçıvan 5 min ildən artıq şəhərsalma mədəniyyətinə malik, qədim Naxçıvan memarlıq məktəbinin banisi Əcəmi Əbubəkr oğlu Naxçıvaninin şah əsərlərini yaşadan dünya əhəmiyyətli mədəniyyət beşiyidir.
+                    </p>
+
+                    <div class="heritage-grid">
+                        <!-- Abidə 1: Möminə Xatun -->
+                        <div class="heritage-card">
+                            <div class="heritage-thumb">
+                                <img src="src/images/momine-xatun-eskiz.jpg" alt="Möminə Xatun Türbəsi">
+                                <span class="heritage-badge">1186-cı il · Əcəmi Naxçıvani</span>
+                            </div>
+                            <div class="heritage-body">
+                                <h3>Möminə Xatun Türbəsi</h3>
+                                <p>Azərbaycan intibah memarlığının zirvəsi, 26 metr ucalığında möhtəşəm onbucaqlı türbə. Şərq incəsənətinin əvəzsiz incisi hesab edilir.</p>
+                            </div>
+                        </div>
+
+                        <!-- Abidə 2: Əlincə Qalası -->
+                        <div class="heritage-card">
+                            <div class="heritage-thumb">
+                                <img src="src/images/elinceqala-naxcivan.jpg" alt="Əlincə Qalası">
+                                <span class="heritage-badge">VI–VII Əsrlər · Qəhrəmanlıq Rəmzi</span>
+                            </div>
+                            <div class="heritage-body">
+                                <h3>Əlincə Qalası</h3>
+                                <p>Teymurləngin 14 il ərzində fəth edə bilmədiyi sıldırım qaya qalası. Azərbaycan xalqının yenilməzlik və cəsarət simvoludur.</p>
+                            </div>
+                        </div>
+
+                        <!-- Abidə 3: İlandağ -->
+                        <div class="heritage-card">
+                            <div class="heritage-thumb">
+                                <img src="src/images/ilandag-naxcivan.jpg" alt="İlandağ Əfsanəsi">
+                                <span class="heritage-badge">2411 m · Təbiət Möcüzəsi</span>
+                            </div>
+                            <div class="heritage-body">
+                                <h3>İlandağ və Haçadağ</h3>
+                                <p>Nuh peyğəmbərin gəmisi ilə bağlı qədim əfsanələrə malik bənzərsiz təbii relyef formasiyası və Naxçıvanın əbədi vizit kartı.</p>
+                            </div>
+                        </div>
+
+                        <!-- Abidə 4: Naxçıvan Türbəsi -->
+                        <div class="heritage-card">
+                            <div class="heritage-thumb">
+                                <img src="src/images/naxcivan-turbesi.jpg" alt="Nuh Peyğəmbər Türbəsi">
+                                <span class="heritage-badge">Tarixi-Memarlıq Kompleksi</span>
+                            </div>
+                            <div class="heritage-body">
+                                <h3>Nuh Peyğəmbər Türbəsi</h3>
+                                <p>Bəşəriyyətin ikinci babası həzrət Nuhun adı ilə bağlı dünya əhəmiyyətli zəvvar və tarixi-arxeoloji ziyarətgah.</p>
+                            </div>
+                        </div>
+
+                        <!-- Abidə 5: Naxçıvan Şəhər Mənzərəsi -->
+                        <div class="heritage-card">
+                            <div class="heritage-thumb">
+                                <img src="src/images/naxcivan-seher-menzeresi.jpg" alt="Müasir Naxçıvan Şəhəri">
+                                <span class="heritage-badge">Paytaxt İntibahı</span>
+                            </div>
+                            <div class="heritage-body">
+                                <h3>Müasir Şəhərsalma</h3>
+                                <p>Tarixi köklər ilə müasir Avropa standartlı abadlığı özündə vəhdət şəklində birləşdirən səliqəli, təhlükəsiz və təmiz şəhər mühiti.</p>
+                            </div>
+                        </div>
+
+                        <!-- Abidə 6: Dövlət Bayrağı Meydanı -->
+                        <div class="heritage-card">
+                            <div class="heritage-thumb">
+                                <img src="src/images/bayraq-meydani-naxcivan.jpg" alt="Bayraq Meydanı Naxçıvan">
+                                <span class="heritage-badge">Dövlətçilik Əzəməti</span>
+                            </div>
+                            <div class="heritage-body">
+                                <h3>Bayraq Meydanı və Muzeyi</h3>
+                                <p>Naxçıvan şəhərinin ən hündür zirvəsində ucaldılmış üçrəngli dövlət bayrağımız və milli dövlətçilik tarixi muzeyi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 04. İnzibati Ərazi Bölgüsü və 8 Rayon Sistemi -->
+                <section id="rayonlar" class="nakh-overview-card">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">İNTERAKTİV İNZİBATİ BÖLGÜ</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">İnzibati Ərazi Vahidləri və Rayonlar</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+                    <p style="font-size: 14.5px; line-height: 1.7; color: #4a5c6d; margin-bottom: 20px;">
+                        Muxtar Respublika 1 paytaxt şəhərdən və 7 inzibati rayondan ibarətdir. İstədiyiniz rayonu seçərək rəsmi demoqrafik və iqtisadi göstəriciləri ilə tanış ola bilərsiniz:
+                    </p>
+
+                    <!-- Rayon Seçim Düymələri -->
+                    <div class="district-tabs-bar" role="tablist">
+                        <button type="button" class="district-tab-btn active" data-district="naxcivan">Naxçıvan Şəhəri</button>
+                        <button type="button" class="district-tab-btn" data-district="serur">Şərur</button>
+                        <button type="button" class="district-tab-btn" data-district="babek">Babək</button>
+                        <button type="button" class="district-tab-btn" data-district="ordubad">Ordubad</button>
+                        <button type="button" class="district-tab-btn" data-district="culfa">Culfa</button>
+                        <button type="button" class="district-tab-btn" data-district="kengerli">Kəngərli</button>
+                        <button type="button" class="district-tab-btn" data-district="sahbuz">Şahbuz</button>
+                        <button type="button" class="district-tab-btn" data-district="sederek">Sədərək</button>
+                    </div>
+
+                    <!-- Rayon Detalları Kartı -->
+                    <div class="district-card" id="districtDetailCard">
+                        <div class="district-info">
+                            <h3>Naxçıvan Şəhəri (Paytaxt)</h3>
+                            <p style="font-size: 14.5px; line-height: 1.7; color: #445566; margin-bottom: 18px;">
+                                Naxçıvan Muxtar Respublikasının qədim paytaxtı, Şərqin ən möhtəşəm mədəniyyət, təhsil və elm ocaqlarından biridir. Möminə Xatun, Nuh Peyğəmbərin türbəsi, Cümə məscidi və Hüseyn Cavidin məqbərəsi bu şəhərdə ucalır.
+                            </p>
+                            <ul class="district-meta-list">
+                                <li><strong>Ərazisi:</strong> <span>191.57 km²</span></li>
+                                <li><strong>Əhalisi:</strong> <span>96,200 nəfər</span></li>
+                                <li><strong>İnzibati Mərkəzi:</strong> <span>Naxçıvan şəhəri (Muxtar Respublikanın İnzibati Paytaxtı)</span></li>
+                                <li><strong>Yaşayış Məntəqələri:</strong> <span>5 şəhərətrafı qəsəbə və kənd</span></li>
+                            </ul>
+                        </div>
+                        <div class="district-economy" style="background: #fbf9f6; padding: 22px; border-radius: 8px; border-left: 3px solid var(--arpsn-gold, #B99755);">
+                            <h4 style="font-size: 16px; font-weight: 700; color: var(--arpsn-navy, #082B48); margin-bottom: 12px;">
+                                <i class="bi bi-graph-up-arrow me-2 text-gold"></i> Əsas İqtisadi İstiqamətlər
+                            </h4>
+                            <p style="font-size: 13.5px; line-height: 1.65; color: #4a5c6d; margin: 0;">
+                                İnzibati idarəetmə, sənaye müəssisələri, ali təhsil və səhiyyə ocaqları, logistika mərkəzi
+                            </p>
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e5e0d8; font-size: 12.5px; color: #6c7f93;">
+                                <i class="bi bi-shield-check me-1"></i> Rəsmi Statistika Komitəsi və Nümayəndəliyin təsdiqlənmiş reyestri əsasında
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 05. Coğrafiya və Təbii Sərvətlər -->
+                <section id="cografiya" class="nakh-overview-card">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">STRATEJİ TƏBİİ EHTİYATLAR</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">Coğrafi Mövqe və Zəngin Yeraltı Sərvətlər</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+                    <p style="font-size: 14.5px; line-height: 1.7; color: #4a5c6d;">
+                        Naxçıvan relyefi zəngin dağlıq silsilələrdən (Qapıcıq zirvəsi 3904 m), Arazboyu münbit düzənliklərdən və bənzərsiz balneoloji müalicəvi bulaqlardan təşkil olunmuşdur:
+                    </p>
+
+                    <div class="resource-grid">
+                        <div class="resource-item">
+                            <div class="resource-icon"><i class="bi bi-droplet-half"></i></div>
+                            <div class="resource-content">
+                                <h4>Müalicəvi Mineral Sular</h4>
+                                <p>Azərbaycanın mineral su ehtiyatlarının 60%-i Naxçıvandadır. Badamlı, Sirab, Vayxır və Darıdağ suları dünya standartlı brendlərdir.</p>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <div class="resource-icon"><i class="bi bi-gem"></i></div>
+                            <div class="resource-content">
+                                <h4>Duzdağ Təbii Yatağı və Müalicəxanası</h4>
+                                <p>Milyon tonlarla saf qaya duzu ehtiyatı və bronxial astma, tənəffüs yolları xəstəliklərini sağaldan unikal yeraltı şaxta sanatoriyası.</p>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <div class="resource-icon"><i class="bi bi-bricks"></i></div>
+                            <div class="resource-content">
+                                <h4>Mərmər və Travertin Yataqları</h4>
+                                <p>Şahtaxtı və Qarabağlar travertinləri, zəngin əlvan metal, mis, molibden və qızıl yataqları sənaye potensialının əsasını təşkil edir.</p>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <div class="resource-icon"><i class="bi bi-signpost-split"></i></div>
+                            <div class="resource-content">
+                                <h4>Zəngəzur Dəhlizi və Geostrateji Qovşaq</h4>
+                                <p>Şərq-Qərb və Şimal-Cənub nəqliyyat arteriyalarını birləşdirərək Naxçıvanı Avrasiyanın mühüm beynəlxalq tranzit qovşağına çevirən strateji mövqe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 06. Yaşıl Enerji və İqtisadi İnkişaf -->
+                <section id="iqtisadiyyat" class="nakh-overview-card">
+                    <div class="section-title-wrap mb-3">
+                        <span class="section-subtitle-cw">STRATEJİ BAXIŞ · 2023–2027</span>
+                        <h2 style="font-size: 22px; font-weight: 800; color: var(--arpsn-navy, #082B48);">“Yaşıl Enerji Zonası” və İqtisadi İntibah</h2>
+                        <div class="gold-line-decor"></div>
+                    </div>
+                    <p style="font-size: 14.5px; line-height: 1.7; color: #4a5c6d;">
+                        Ölkə Prezidenti İlham Əliyevin qarşıya qoyduğu strateji hədəfə əsasən Naxçıvan Muxtar Respublikası "Yaşıl Enerji Zonası" elan edilmişdir. Muxtar Respublikanın günəş və hidroenerji potensialı təkcə daxili tələbatı 100% təmin etməklə qalmır, qonşu Türkiyə və Avropa bazarlarına yaşıl elektrik enerjisi ixrac etməyə imkan verir.
+                    </p>
+                    <div style="background: linear-gradient(135deg, #082B48 0%, #104169 100%); color: #ffffff; padding: 24px; border-radius: 8px; margin-top: 20px;">
+                        <h4 style="color: var(--arpsn-gold, #B99755); font-size: 17px; font-weight: 700; margin-bottom: 10px;">
+                            <i class="bi bi-sun-fill me-2"></i> 500+ MVt Günəş və Külək Gücü Layihəsi
+                        </h4>
+                        <p style="font-size: 13.5px; line-height: 1.65; margin: 0; color: #e1ebf4;">
+                            TotalEnergies, Nobel Energy və beynəlxalq investorların iştirakı ilə Naxçıvanda 500 MVt gücündə günəş fotoelektrik və külək stansiyalarının qurulması, həmçinin Naxçıvan-Türkiyə yüksək gərginlikli ixrac xəttinin çəkilişi sürətlə icra olunur.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================================================================== -->
+    <!-- 04. FOOTER                                                               -->
+    <!-- ======================================================================== -->
+    <footer id="elaqe" data-aos="fade-up">
+        <div class="container">
+            <!-- 4 Sütunlu Footer -->
+            <div class="footer-cols-four">
+                <!-- Sütun 1: Loqo və Qurum Məlumatı -->
+                <div class="footer-col">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="https://static.president.az/images/pages/gerb.svg" alt="Dövlət Gerbi" width="44"
+                            height="54">
+                        <div>
+                            <strong id="footerLogoTitle"
+                                style="color: #ffffff; font-size: 18px; font-weight: 800; letter-spacing: 0.8px; display: block; line-height: 1.1;">ARPSN</strong>
+                            <span style="font-size: 11.5px; font-weight: 600; color: var(--arpsn-gold, #B99755); display: block; line-height: 1.35; margin-top: 3px;">
+                                Azərbaycan Respublikası Prezidentinin Səlahiyyətli Nümayəndəliyi
+                            </span>
+                        </div>
+                    </div>
+                    <p id="footerDesc" style="font-size: 13px; line-height: 1.6; color: #9cb3c7; margin-bottom: 14px;">
+                        Naxçıvan Muxtar Respublikasında dövlət siyasətinin vahid mərkəzdən koordinasiyası və regional sosial-iqtisadi inkişafın təminatçısı olan ali rəsmi institut.
+                    </p>
+                </div>
+
+                <!-- Sütun 2: Rəsmi Keçidlər -->
+                <div class="footer-col">
+                    <h4 id="footerCol2Title">Rəsmi Keçidlər</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://president.az" target="_blank" rel="noopener noreferrer"><i
+                                    class="bi bi-chevron-right"></i> Azərbaycan Respublikası Prezidenti</a></li>
+                        <li><a href="https://president.az/az/articles/view/58279" target="_blank"
+                                rel="noopener noreferrer"><i class="bi bi-chevron-right"></i> Nümayəndəliyin
+                                Əsasnaməsi</a></li>
+                        <li><a href="https://heydar-aliyev-foundation.org" target="_blank" rel="noopener noreferrer"><i
+                                    class="bi bi-chevron-right"></i> Heydər Əliyev Fondu</a></li>
+                        <li><a href="#dovlet-proqramlari" onclick="openSubView('act-prog');return false;"><i
+                                    class="bi bi-chevron-right"></i> 2023–2027 Dövlət Proqramı</a></li>
+                        <li><a href="#aparat" onclick="openSubView('rep-structure');return false;"><i
+                                    class="bi bi-chevron-right"></i> Nümayəndəliyin Aparat Strukturu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sütun 3: Vətəndaş Xidmətləri -->
+                <div class="footer-col">
+                    <h4 id="footerCol3Title">Vətəndaş Xidmətləri</h4>
+                    <ul class="footer-links">
+                        <li><a href="#muraciet" onclick="openSubView('cit-appeal');return false;"><i
+                                    class="bi bi-chevron-right"></i> Elektron Müraciət Xidməti</a></li>
+                        <li><a href="#qebul" onclick="openSubView('cit-schedule');return false;"><i
+                                    class="bi bi-chevron-right"></i> Vətəndaşların Qəbul Qaydaları</a></li>
+                        <li><a href="#qebula-yazilma" onclick="openSubView('cit-booking');return false;"><i
+                                    class="bi bi-chevron-right"></i> Qəbula Onlayn Yazılma</a></li>
+                        <li><a href="#muraciet-status" onclick="openSubView('cit-status');return false;"><i
+                                    class="bi bi-chevron-right"></i> Müraciət Statusunu Yoxla</a></li>
+                        <li><a href="#faq" onclick="openSubView('cit-faq');return false;"><i
+                                    class="bi bi-chevron-right"></i> Tez-tez Verilən Suallar (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sütun 4: Əlaqə və İş Qrafiki -->
+                <div class="footer-col">
+                    <h4 id="footerCol4Title">Rəsmi Əlaqə</h4>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt-fill"></i> <span id="footerAddress">AZ 7000, Naxçıvan şəhəri, Heydər
+                                Əliyev prospekti 50</span></li>
+                        <li><i class="bi bi-telephone-fill"></i> <span id="footerHotline">Qaynar xətt: (036)
+                                545-00-00</span></li>
+                        <li><i class="bi bi-envelope-fill"></i> <span>office@arpsn.gov.az</span></li>
+                        <li><i class="bi bi-clock-fill"></i> <span id="footerHours">B.e. - C. 09:00 - 18:00 (Nahar:
+                                13:00 - 14:00)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subfooter -->
+            <div class="term-and-condition">
+                <div class="subfooter-inner" style="justify-content: center; text-align: center;">
+                    <span id="footerCopy" style="color: #9cb3c7; font-size: 13px; letter-spacing: 0.3px;">© 2026
+                        Azərbaycan Respublikası Prezidentinin Naxçıvan Muxtar Respublikasında Səlahiyyətli
+                        Nümayəndəliyi. Bütün hüquqlar qorunur.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Progress Button -->
+    <div class="progress-wrap" id="progressWrap" role="button" aria-label="Səhifənin əvvəlinə qayıt" tabindex="0">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <script src="src/js/nakhchivan.js" defer></script>
+</body>
+
+</html>
+
+
+

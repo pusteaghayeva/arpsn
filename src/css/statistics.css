@@ -1,0 +1,137 @@
+/* ==========================================================================
+   RƏSMİ STATİSTİKA VƏ GÖSTƏRİCİLƏR (src/css/statistics.css)
+   Dizayn konsepti: Rəqəmsal İnfoqrafik Panel, Makro İndikatorlar, Qrafiklər
+   ========================================================================== */
+
+.stat-hero-banner {
+    background: linear-gradient(135deg, var(--arpsn-navy, #082B48) 0%, #0c3659 100%);
+    border-radius: 12px;
+    padding: 35px 40px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    border: 1px solid rgba(185, 151, 85, 0.3);
+}
+
+.stat-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.stat-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: #d1dde6;
+    max-width: 850px;
+    margin: 0;
+}
+
+/* 6 Əsas İndikator Qridi */
+.stat-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 45px;
+}
+
+.stat-card-box {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.1));
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(8, 43, 72, 0.1);
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.stat-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.stat-card-label {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #556677;
+}
+
+.stat-card-icon {
+    width: 40px;
+    height: 40px;
+    background: #f4ecdf;
+    color: var(--arpsn-gold, #B99755);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.stat-card-number {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 6px;
+    line-height: 1.1;
+}
+
+.stat-growth-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #198754;
+    background: #eef9f2;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* Sektorların Payı (Visual Bars) */
+.stat-bars-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.05);
+}
+
+.stat-bar-item {
+    margin-bottom: 20px;
+}
+
+.stat-bar-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 6px;
+}
+
+.stat-bar-track {
+    height: 10px;
+    background: #eef2f5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--arpsn-navy, #082B48), var(--arpsn-gold, #B99755));
+    border-radius: 5px;
+}

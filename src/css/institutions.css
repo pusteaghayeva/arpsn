@@ -1,0 +1,136 @@
+/* ==========================================================================
+   MÜƏSSİSƏLƏR KATALOQU (src/css/institutions.css)
+   Dizayn konsepti: Tabeli və Əlaqəli Qurumlar Kataloqu, Əlaqə Koordinatları
+   ========================================================================== */
+
+.inst-hero-box {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(8, 43, 72, 0.05);
+}
+
+.inst-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+}
+
+.inst-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--arpsn-text-muted, #536474);
+    max-width: 850px;
+    margin: 0;
+}
+
+/* Müəssisələr Qridi */
+.inst-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.inst-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.1));
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(8, 43, 72, 0.04);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.inst-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(8, 43, 72, 0.1);
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.inst-card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.inst-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #f4ecdf;
+    color: var(--arpsn-gold, #B99755);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.inst-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--arpsn-navy, #082B48);
+    line-height: 1.35;
+    margin: 0;
+}
+
+.inst-card-sector {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #795e28;
+    background: #fbf9f6;
+    border: 1px solid #ebe5dc;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.inst-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 13.5px;
+    color: #556677;
+    flex: 1;
+}
+
+.inst-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.inst-contact-list i {
+    color: var(--arpsn-gold, #B99755);
+    margin-top: 2px;
+}
+
+.inst-btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #f4ecdf;
+    color: var(--arpsn-navy, #082B48);
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.inst-btn-link:hover {
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+}

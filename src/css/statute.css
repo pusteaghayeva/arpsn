@@ -1,0 +1,106 @@
+/* ==========================================================================
+   ƏSASNAMƏ VƏ HÜQUQİ ƏSASLAR SƏHİFƏSİ STİLLƏRİ (src/css/statute.css)
+   ========================================================================== */
+
+.statute-page-wrap {
+    padding: 30px 0 60px;
+    background: #fbf9f6;
+}
+
+.statute-document-paper {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, #e5e0d8);
+    border-radius: 12px;
+    padding: 45px 50px;
+    box-shadow: 0 8px 30px rgba(8, 43, 72, 0.05);
+    max-width: 960px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.statute-preamble-box {
+    text-align: center;
+    border-bottom: 2px solid var(--arpsn-gold, #B99755);
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+.statute-gerb-icon {
+    width: 60px;
+    height: 72px;
+    margin-bottom: 14px;
+}
+
+.statute-decree-number {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--arpsn-gold, #B99755);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.statute-decree-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.statute-decree-date {
+    font-size: 13.5px;
+    color: #6a7d90;
+    font-style: italic;
+}
+
+.statute-section-block {
+    margin-bottom: 35px;
+}
+
+.statute-chapter-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    background: #f7f5f0;
+    border-left: 4px solid var(--arpsn-gold, #B99755);
+    padding: 10px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 18px;
+}
+
+.statute-article-item {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: #3b4d61;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.statute-article-item strong {
+    color: var(--arpsn-navy, #082B48);
+}
+
+.statute-pdf-card {
+    background: linear-gradient(135deg, #082B48 0%, #104169 100%);
+    border-radius: 8px;
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.statute-pdf-info h4 {
+    color: var(--arpsn-gold, #B99755);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px;
+}
+
+.statute-pdf-info p {
+    font-size: 13px;
+    color: #dbe7f2;
+    margin: 0;
+}

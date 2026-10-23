@@ -1,0 +1,119 @@
+/* ==========================================================================
+   NAXÇIVAN İNZİBATİ RAYONLARI (src/css/districts.css)
+   Dizayn konsepti: 8 İnzibati Rayon Kataloqu, İqtisadi Göstəricilər
+   ========================================================================== */
+
+.dist-hero-box {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.12));
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(8, 43, 72, 0.05);
+}
+
+.dist-hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--arpsn-navy, #082B48);
+    margin-bottom: 12px;
+}
+
+.dist-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--arpsn-text-muted, #536474);
+    max-width: 850px;
+    margin: 0;
+}
+
+/* 8 Rayon Qridi */
+.dist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 50px;
+}
+
+.dist-card {
+    background: #ffffff;
+    border: 1px solid var(--arpsn-border, rgba(8, 43, 72, 0.1));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(8, 43, 72, 0.04);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.dist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(8, 43, 72, 0.1);
+    border-color: var(--arpsn-gold, #B99755);
+}
+
+.dist-card-header {
+    background: var(--arpsn-navy, #082B48);
+    color: #ffffff;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dist-card-name {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.dist-card-badge {
+    background: rgba(185, 151, 85, 0.3);
+    color: #f7e7c4;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.dist-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.dist-meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    font-size: 13.5px;
+}
+
+.dist-meta-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #ede8df;
+    color: #556677;
+}
+
+.dist-meta-list li:last-child {
+    border-bottom: none;
+}
+
+.dist-meta-list strong {
+    color: var(--arpsn-navy, #082B48);
+}
+
+.dist-focus-tag {
+    font-size: 12px;
+    color: #795e28;
+    background: #f4ecdf;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: auto;
+}
